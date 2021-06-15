@@ -1,0 +1,152 @@
+
+/* -------------------animation------------------ */
+#heart {
+    position: relative;
+    animation: heartbeat 2s infinite;
+    margin:0 auto;
+    width: 400px;
+    height: 400px;
+
+}
+
+
+@keyframes heartbeat
+{
+  0%
+  {
+    transform: scale( .85 );
+  }
+  20%
+  {
+    transform: scale( 1 );
+  }
+  40%
+  {
+    transform: scale( .85 );
+  }
+  60%
+  {
+    transform: scale( 1 );
+  }
+  80%
+  {
+    transform: scale( .85 );
+  }
+  100%
+  {
+    transform: scale( .85 );
+  }
+}
+/*---------------------------*/
+/*-------------------nav bar div --------------*/ 
+
+/* box-shadow: -1px 2px 26px -3px #80808040; */
+/* ------------------- personal div ------------------/ */
+section#companyInfo
+{
+    color: #2a2b2b;
+    height:600px;
+    width:100%;
+    background-color: #f8f9fc;
+}
+section#companyInfo img
+{
+    margin: 80px 100px 100px 0px;
+    float: right;
+}
+section#generalInfo 
+{
+    text-align: left ;
+    margin: 55px 0px 0px 30px ; 
+    display: inline-block;
+    width: 60%;
+    padding-left: 20px;
+}
+section#generalInfo span#nameSpan
+{
+    font-size: 72px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    word-spacing: 5px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+section#generalInfo span#jobSpan
+{
+    display:block;
+    font-size: 30px;
+    word-spacing: 3px;
+    margin-bottom: 20px;
+}
+div#aboutContent
+{
+    width: 70%;
+    text-align: left;
+    font-size: 20px;
+    color:#4e4d4d;
+}
+
+span#linkSpan
+{
+    display:block;
+    padding-top:20px;
+    margin-top: 20px;
+}
+
+span#linkSpan>a 
+{
+    border: 2px solid #4e4d4d;
+    text-decoration: none;
+    color: #4e4d4d;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    font-size: 18px;
+    font-weight: bold;
+    padding:10px 30px;
+}
+
+/* -----------------ServicesDiv-------------------- */
+
+section#ServicesDiv
+{
+    background-color: #2a2b2b;
+    color:#f8f9fc;
+    text-align: center;
+    padding: 1%;
+    padding-bottom: 6%;
+    border-bottom: 1px solid gray;
+}
+section#ServicesDiv h1
+{
+    word-spacing: 3px;
+    letter-spacing: 2px; 
+    padding: 1% ;
+}
+
+section#servicesInfo
+{
+    padding: 1%;
+}
+section#servicesInfo h3
+{
+    font-weight: bold;
+}
+.serviceAlignment{
+    display: inline-block;
+    width: 48%;
+    text-align: center;
+}
+
+.serviceImg{
+    width: 150px;
+    height: 150px;
+    margin-bottom: 3%;
+}
+.paraWidth{
+    display: inline-block;
+    width: 40%;
+    
+}
+
+

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8">
+        <title>The Donor</title>
+        <link rel="shortcut icon" href="images/hospital.svg" type="image/x-icon">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/generalStyle.css">
+        <link rel="stylesheet" href="css/indexStyle.css">
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        
+        <script src="js/localData.js"></script>
+        
+         <!-- Latest compiled and minified CSS -->
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+         <!-- jQuery library -->
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ 
+         <!-- Popper JS -->
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+ 
+         <!-- Latest compiled JavaScript -->
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+         
+         <script defer src="js/navScript.js"></script>
+         <script defer src="js/logoutScript.js"></script>
+ 
+        
+    </head>
+    <body >
+
+        <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light" style="box-shadow: -1px 2px 26px -3px #80808040;">
+            <a class="navbar-brand" href="#">
+                <img src="images/hospital.svg" width="30" height="30" class="d-inline-block align-top" alt="The Donor Brand" loading="lazy">
+                The Donor
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul id="navWithOutLogin" class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="register.html">Sign UP</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link " href="login.html">Sing In</a>
+                  </li>
+                </ul>
+                <ul class="navbar-nav" id="navWithLogin" style="display:none;">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="home.html">Requests</a>
+                      </li>
+                    <li id="navWithLogin" class="nav-item">
+                      <a class="nav-link" href="createRequest.html">Create Request</a>
+                    </li>
+                    
+                </ul>
+
+                <a href="login.html" style="margin-left:auto; text-decoration: none;" id="logOutDisplay" onclick="logOutfun()"><i class="fa fa-sign-out fa-2x text-dark" aria-hidden="true"></i></a>
+                   
+              </div>
+
+          </nav>
+        
+        <section id="companyInfo">
+
+            <section id="generalInfo">
+                <span id="nameSpan">The Donor</span>
+                <span id="jobSpan">Helps you to be safe</span>
+                <div id="aboutContent">
+                    The donor is a website similar to a blood bank that helps you to be safe and helps you to reach the donors who are able to provide the blood request that you request, where when you attach a request to a dedicated blood sample, it sees all the donors who have the same blood group and they communicate with the applicant and at the same time you can Be a donor to help others.  
+                </div>
+                <span id="linkSpan"><a href="register.html" target="_top">Sign UP</a></span>
+            </section>
+            <img src="images/hospital_intro.svg" alt="ads image" id="heart" width="100%" height="400">
+
+        </section>
+        <div style="clear: both;"></div>
+        <section id="ServicesDiv">
+            <h1>Services</h1> 
+            <section id="servicesInfo">
+                <section id="donor" class="serviceAlignment" style="border-right:1px solid rgb(175, 173, 173);">
+                    <img src="images/donor.svg" alt="donor image" class="serviceImg">
+                    <h3>Donor</h3>
+                    <p class="paraWidth">
+                        You can help the applicant by beeing a donor for any request you want.
+                    </p>
+                </section>
+                <section id="applicant" class="serviceAlignment">
+                    <img src="images/phone.svg" alt="Applicant image" class="serviceImg" >
+                    <h3>Applicant</h3>
+                    <p class="paraWidth">
+                        You can make a request for any blood type and you will get the help that you need.
+                    </p>
+                </section>
+                
+            </section>
+        </section>
+
+        
+
+        <!--footer-->
+        <footer class="footer">
+            
+            <div >
+                Copyright &copy; 2021 All Rights Reserved by 
+                    <a href="#">ITI Student</a>.
+                
+                <ul class="social-icons">
+                    <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+                    <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+                </ul>
+            </div>
+            
+              
+        </footer>
+          
+        <!-- <script defer>
+            /***if Login */
+            var ifLogin = JSON.parse(localStorage.getItem("logedInInfo"));
+            var iconCard = document.getElementById("CardDisplay");
+            var iconLogin = document.getElementById("loginDisplay");
+            var iconLogout = document.getElementById("logOutDisplay");
+            var iconProfile = document.getElementById("ProfileDisplay");
+
+            if (ifLogin.logedin == false) {
+                iconCard.style.display = "none";
+                iconProfile.style.display = "none";
+                iconLogin.style.display = "block";
+                iconLogout.style.display = "none";
+
+            } else {
+                iconCard.style.display = "block";
+                iconProfile.style.display = "block";
+                iconLogin.style.display = "none";
+                iconLogout.style.display = "block";
+                let jsonUser = JSON.parse(localStorage.getItem("Users"));
+                for (let nameUser = 0; nameUser < jsonUser.length; nameUser++) {
+                    if (jsonUser[nameUser].userId == ifLogin.userId) {
+                    iconProfile.innerHTML = "<i class='fas fa-user'></i> " + jsonUser[nameUser].fullName;
+
+                    }
+                }
+            }
+
+
+            function logOutfun(){
+                let logedInInfo = {
+                logedin: false,
+                userId:0
+                };
+                var JSONLogedInInfoToSTR = JSON.stringify(logedInInfo);
+                localStorage.setItem("logedInInfo", JSONLogedInInfoToSTR);
+            }
+
+            
+        </script> -->
+       
+    </body>
+</html>
